@@ -9,8 +9,8 @@ use Magento\Framework\GraphQl\Exception\GraphQlInputException;
 use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
-use Magento\Framework\Api\SortOrder;
-use Magento\Framework\Api\SortOrderBuilder;
+// use Magento\Framework\Api\SortOrder;
+// use Magento\Framework\Api\SortOrderBuilder;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
 /**
@@ -22,17 +22,17 @@ class Products implements ResolverInterface
      * SortOrder builder
      * @var SortOrderBuilder
      */
-    private $sortOrderBuilder;
+    // private $sortOrderBuilder;
 
     public function __construct(
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
         \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder,
-        SortOrderBuilder $sortOrderBuilder,
+        // SortOrderBuilder $sortOrderBuilder,
         CollectionFactory $collectionFactory
     ) {
         $this->productRepository = $productRepository;
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
-        $this->sortOrderBuilder = $sortOrderBuilder;
+        // $this->sortOrderBuilder = $sortOrderBuilder;
         $this->productCollection = $collectionFactory;
 
     }
